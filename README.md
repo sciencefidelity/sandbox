@@ -1,4 +1,4 @@
-# Challenge
+# Sandbox
 
 This repo is a collection of simple environments in various languages that interest me. I use these templates for test driven development of functions to solve coding challenges or for use as utilities in apps.
 
