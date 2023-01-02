@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild index.ts --log-level=info --outfile=./build/index.js",
+    "build:watch": "esbuild index.ts --log-level=info --outfile=./build/index.js --watch",
+    "prerun": "npm run build",
+    "run": "node build/index.js",
+    "start": "onchange build/index.js -- node build/index.js",
+    "watch": "concurrently --kill-others --raw 'npm:build:watch' 'npm:start'",
+    "build:test": "esbuild index_test.ts --log-level=info --outfile=./build/index_test.js",
+    "build:test:watch": "esbuild index_test.ts --log-level=info --outfile=./build/index_test.js --watch",
+    "pretest": "concurrently --raw 'npm:build:test' 'npm:build'",
+    "test": "node --test build/index_test.js",
+    "start:test": "onchange 'build/index.js' 'build/index_test.js' -- node --test build/index_test.js",
+    "tdd": "concurrently --kill-others --raw 'npm:build:watch' 'npm:build:test:watch' 'npm:start:test'"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.16.12",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "onchange": "^7.1.0",
+    "typescript": "^4.9.4"
+  }
+}
