@@ -1,5 +1,7 @@
 # Bun
 
+The only dependency for this is `chokadir-cli` to allow watching for file changes. Maybe there is already a way to do this built into Bun which I haven't yet found.
+
 Commands:
 
 ```shell
