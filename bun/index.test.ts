@@ -1,3 +1,5 @@
+// @ts-expect-error - no types for bun
+import { expect, test } from "bun:test";
 import { maxSubArray } from ".";
 
 test("sum of max sub array is 6", () => {

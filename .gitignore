@@ -24,3 +24,4 @@ DerivedData
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
 tags
+node_modules

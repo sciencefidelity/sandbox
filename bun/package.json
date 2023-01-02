@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "watch": "chokidar '**/*.ts' -c 'bun run index.ts'",
+    "tdd": "bun chokidar '**/*.ts' -c 'bun wiptest'"
+  },
+  "dependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+}
