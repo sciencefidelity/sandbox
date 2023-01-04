@@ -4,6 +4,7 @@
     "tdd": "bun chokidar '**/*.ts' -c 'bun wiptest'"
   },
   "dependencies": {
+    "@types/node": "^18.11.18",
     "chokidar-cli": "^3.0.0"
   }
 }
