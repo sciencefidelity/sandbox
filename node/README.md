@@ -4,18 +4,16 @@ After some experimentation I've settled on a speedy TDD setup for node using `es
 
 ```shell
 # run project
-bun run index.ts
+npm run run
 
 # start the app
-# bun chokidar "**/*.ts" -c "bun run index.ts"
-bun watch
+npm run watch
 
 # run the tests
-bun wiptest
+npm run test
 
 # start the test suite
-# bun chokidar "**/*.ts" -c "bun wiptest"
-bun tdd
+npm run tdd
 ```
 
 ```typescript
