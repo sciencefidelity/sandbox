@@ -1,4 +1,4 @@
-export const maxSubArray = (nums: number[]): number => {
+export const maxSubArray = (nums: number[]) => {
   let max = nums[0];
   let sum = 0;
   for (const num of nums) {

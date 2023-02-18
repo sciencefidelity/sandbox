@@ -3,6 +3,8 @@
 .packages
 build
 _build
+dist
+_dist
 cover
 deps
 doc
